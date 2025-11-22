@@ -35,18 +35,18 @@ export const Header: React.FC<HeaderProps> = ({ isHome = true, onNavigateHome })
       setTimeout(() => {
         const element = document.querySelector(href);
         if (element) {
-            const headerOffset = 85;
+            const headerOffset = 100;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.scrollY - headerOffset;
             window.scrollTo({ top: offsetPosition, behavior: "smooth" });
         }
-      }, 100);
+      }, 200);
       return;
     }
 
     const element = document.querySelector(href);
     if (element) {
-      const headerOffset = 85;
+      const headerOffset = 100;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
@@ -58,19 +58,20 @@ export const Header: React.FC<HeaderProps> = ({ isHome = true, onNavigateHome })
   };
 
   // When scrolled: darker background, blur, shadow, and neon border
+  // Transition duration set to 1000ms (1 second) as requested
   const headerClasses = scrolled || !isHome
-    ? 'bg-deep-teal/90 backdrop-blur-xl py-3 shadow-[0_4px_30px_rgba(0,0,0,0.1)]'
+    ? 'bg-deep-teal/95 backdrop-blur-xl py-3 shadow-[0_4px_30px_rgba(230,255,43,0.15)]'
     : 'bg-transparent py-5 md:py-7';
 
-  // The neon gradient line at the bottom - Changed to Neon Yellow
+  // The neon gradient line at the bottom - Neon Yellow Gradient
   const neonBorderClass = scrolled || !isHome
     ? 'opacity-100 scale-x-100'
     : 'opacity-0 scale-x-0';
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-700 ease-in-out ${headerClasses}`}>
-      {/* Neon Gradient Border Bottom - Now Neon Yellow */}
-      <div className={`absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-neon-yellow to-transparent transition-all duration-1000 transform origin-center ${neonBorderClass} shadow-[0_0_10px_rgba(230,255,43,0.5)]`}></div>
+    <header className={`fixed w-full top-0 z-50 transition-all duration-1000 ease-in-out ${headerClasses}`}>
+      {/* Neon Gradient Border Bottom - Neon Yellow Gradient */}
+      <div className={`absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-neon-yellow to-transparent transition-all duration-1000 transform origin-center ${neonBorderClass} shadow-[0_0_15px_rgba(230,255,43,0.6)]`}></div>
 
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center relative">
         

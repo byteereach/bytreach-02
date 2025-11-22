@@ -40,13 +40,19 @@ export const Services: React.FC = () => {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.05 }}
               whileHover={{ y: -10 }}
-              className="group bg-soft-white p-6 md:p-8 rounded-2xl border border-transparent hover:border-neon-yellow hover:bg-white hover:shadow-card transition-all duration-300"
+              className="group bg-soft-white p-6 md:p-8 rounded-2xl border border-transparent hover:border-neon-yellow hover:bg-white hover:shadow-card transition-all duration-300 flex flex-col relative"
             >
               <div className="bg-deep-teal text-neon-yellow w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-neon-yellow group-hover:text-deep-teal transition-colors group-hover:rotate-3 duration-300">
                 {service.icon}
               </div>
               <h3 className="text-lg md:text-xl font-bold text-deep-teal mb-3">{service.title}</h3>
-              <p className="text-neutral-grey leading-relaxed text-sm md:text-base">{service.description}</p>
+              <p className="text-neutral-grey leading-relaxed text-sm md:text-base mb-8">{service.description}</p>
+              
+              <div className="mt-auto pt-4 border-t border-gray-100">
+                  <span className="text-sm font-bold text-deep-teal flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 -translate-x-4 group-hover:translate-x-0">
+                    Learn More <span className="text-lg">→</span>
+                  </span>
+              </div>
             </motion.div>
           ))}
         </div>

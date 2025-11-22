@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
@@ -11,6 +12,7 @@ import { Contact } from './components/Contact';
 import { InfoSection } from './components/InfoSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
+import { ChatBot } from './components/ChatBot';
 import { TermsAndConditions } from './components/TermsAndConditions';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { AdminDashboard } from './components/AdminDashboard';
@@ -50,7 +52,7 @@ const App: React.FC = () => {
     setTimeout(() => {
         const element = document.querySelector('#contact');
         if (element) {
-            const headerOffset = 85;
+            const headerOffset = 100;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.scrollY - headerOffset;
             window.scrollTo({
@@ -96,9 +98,11 @@ const App: React.FC = () => {
         onNavigateAdmin={navigateToAdmin}
       />
       
+      <ChatBot />
       <FloatingWhatsApp />
     </div>
   );
 };
 
 export default App;
+    

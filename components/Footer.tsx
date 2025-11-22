@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({
     const scrollToSection = () => {
       const element = document.querySelector(href);
       if (element) {
-        const headerOffset = 85;
+        const headerOffset = 100;
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.scrollY - headerOffset;
   
@@ -43,7 +43,7 @@ export const Footer: React.FC<FooterProps> = ({
       onNavigateHome();
       
       // Timeout to allow Home page to mount before scrolling
-      setTimeout(scrollToSection, 100);
+      setTimeout(scrollToSection, 300);
     }
   };
 
@@ -54,7 +54,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="bg-neon-yellow p-1.5 rounded-md">
+              <div className="bg-neon-blue p-1.5 rounded-md">
                 <svg 
                   className="w-5 h-5 text-deep-teal" 
                   viewBox="0 0 24 24" 
@@ -78,16 +78,16 @@ export const Footer: React.FC<FooterProps> = ({
               Your results-focused digital partner. We help businesses scale through strategic marketing and creative innovation.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-neon-yellow transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-400 hover:text-neon-yellow transition-colors"><Linkedin className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-400 hover:text-neon-yellow transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-400 hover:text-neon-yellow transition-colors"><Twitter className="w-5 h-5" /></a>
+              <a href="#" className="text-gray-400 hover:text-neon-blue transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="#" className="text-gray-400 hover:text-neon-blue transition-colors"><Linkedin className="w-5 h-5" /></a>
+              <a href="#" className="text-gray-400 hover:text-neon-blue transition-colors"><Facebook className="w-5 h-5" /></a>
+              <a href="#" className="text-gray-400 hover:text-neon-blue transition-colors"><Twitter className="w-5 h-5" /></a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-lg mb-6 text-neon-yellow">Quick Links</h4>
+            <h4 className="font-bold text-lg mb-6 text-neon-blue">Quick Links</h4>
             <ul className="space-y-3 text-gray-400">
               <li><a href="#hero" onClick={(e) => handleLinkClick(e, '#hero')} className="hover:text-white transition-colors">Home</a></li>
               <li><a href="#about" onClick={(e) => handleLinkClick(e, '#about')} className="hover:text-white transition-colors">About Us</a></li>
@@ -98,7 +98,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Services */}
           <div>
-            <h4 className="font-bold text-lg mb-6 text-neon-yellow">Services</h4>
+            <h4 className="font-bold text-lg mb-6 text-neon-blue">Services</h4>
             <ul className="space-y-3 text-gray-400">
               <li><a href="#services" onClick={(e) => handleLinkClick(e, '#services')} className="hover:text-white transition-colors">Web Development</a></li>
               <li><a href="#services" onClick={(e) => handleLinkClick(e, '#services')} className="hover:text-white transition-colors">SEO Optimization</a></li>
@@ -109,7 +109,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-lg mb-6 text-neon-yellow">Contact</h4>
+            <h4 className="font-bold text-lg mb-6 text-neon-blue">Contact</h4>
             <ul className="space-y-3 text-gray-400">
               <li>bytereach@gmail.com</li>
               <li>+91 8320086937</li>
