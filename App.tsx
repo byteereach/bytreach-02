@@ -17,6 +17,8 @@ import { TermsAndConditions } from './components/TermsAndConditions';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { AdminDashboard } from './components/AdminDashboard';
 import { ResultsPage } from './components/ResultsPage';
+import { CustomCursor } from './components/CustomCursor';
+import { WelcomeEffect } from './components/WelcomeEffect';
 
 const App: React.FC = () => {
   const [view, setView] = useState<'home' | 'terms' | 'privacy' | 'admin' | 'results-page'>('home');
@@ -64,7 +66,9 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col relative overflow-x-hidden">
+    <div className="min-h-screen flex flex-col relative overflow-x-hidden cursor-none">
+      <CustomCursor />
+      <WelcomeEffect />
       <Header 
         isHome={view === 'home'} 
         onNavigateHome={navigateToHome} 
@@ -105,4 +109,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-    

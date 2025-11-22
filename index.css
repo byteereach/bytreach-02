@@ -20,6 +20,13 @@ html {
   scroll-padding-top: 100px; /* Ensures anchor links don't hide behind sticky header */
 }
 
+/* Custom Cursor Logic */
+@media (hover: hover) and (pointer: fine) {
+  body, a, button, input, textarea, select, [role="button"] {
+    cursor: none !important;
+  }
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
