@@ -78,10 +78,10 @@ export const Footer: React.FC<FooterProps> = ({
               Your results-focused digital partner. We help businesses scale through strategic marketing and creative innovation.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-neon-blue transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-400 hover:text-neon-blue transition-colors"><Linkedin className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-400 hover:text-neon-blue transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" className="text-gray-400 hover:text-neon-blue transition-colors"><Twitter className="w-5 h-5" /></a>
+              <a href="#" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-neon-blue transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="#" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-neon-blue transition-colors"><Linkedin className="w-5 h-5" /></a>
+              <a href="#" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-neon-blue transition-colors"><Facebook className="w-5 h-5" /></a>
+              <a href="#" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-neon-blue transition-colors"><Twitter className="w-5 h-5" /></a>
             </div>
           </div>
 

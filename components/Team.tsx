@@ -87,10 +87,10 @@ export const Team: React.FC = () => {
 
                {/* Minimal Socials Fade In */}
                <div className="flex gap-3 mt-4 opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100">
-                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                 <a href="#" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-white transition-colors">
                     <Linkedin className="w-5 h-5" />
                  </a>
-                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                 <a href="#" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-white transition-colors">
                     <Twitter className="w-5 h-5" />
                  </a>
                </div>

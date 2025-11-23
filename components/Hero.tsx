@@ -7,7 +7,22 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onNavigateResults }) => {
-  const badgeText = "Digital marketing is the future";
+  const badgeText = "Let's build something big";
+
+  const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.querySelector('#contact');
+    if (element) {
+      const headerOffset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-deep-teal">
@@ -89,6 +104,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateResults }) => {
           >
             <motion.a
               href="#contact"
+              onClick={handleScrollToContact}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-neon-blue text-deep-teal font-bold text-base md:text-lg rounded-full hover:bg-white transition-all shadow-[0_0_30px_rgba(0,240,255,0.4)] flex items-center justify-center gap-3"
