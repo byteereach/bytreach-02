@@ -78,10 +78,9 @@ export const Footer: React.FC<FooterProps> = ({
               Your results-focused digital partner. We help businesses scale through strategic marketing and creative innovation.
             </p>
             <div className="flex gap-4">
-              <a href="#" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-neon-blue transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="#" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-neon-blue transition-colors"><Linkedin className="w-5 h-5" /></a>
-              <a href="#" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-neon-blue transition-colors"><Facebook className="w-5 h-5" /></a>
-              <a href="#" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-neon-blue transition-colors"><Twitter className="w-5 h-5" /></a>
+              <a href="https://www.instagram.com/bytereachdigital_/" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-neon-blue transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="https://www.linkedin.com/in/om-gadhiya/" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-neon-blue transition-colors"><Linkedin className="w-5 h-5" /></a>
+              <a href="https://www.facebook.com/profile.php?id=61584276053451" onClick={(e) => e.preventDefault()} className="text-gray-400 hover:text-neon-blue transition-colors"><Facebook className="w-5 h-5" /></a>
             </div>
           </div>
 
@@ -111,7 +110,7 @@ export const Footer: React.FC<FooterProps> = ({
           <div>
             <h4 className="font-bold text-lg mb-6 text-neon-blue">Contact</h4>
             <ul className="space-y-3 text-gray-400">
-              <li>bytereach@gmail.com</li>
+              <li>byteereach@gmail.com</li>
               <li>+91 8320086937</li>
               <li>India</li>
             </ul>
@@ -125,11 +124,6 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="flex gap-6 text-sm text-gray-500 items-center">
             <button onClick={() => { if(onNavigateTerms) onNavigateTerms() }} className="hover:text-white transition-colors">Terms of Service</button>
             <button onClick={() => { if(onNavigatePrivacy) onNavigatePrivacy() }} className="hover:text-white transition-colors">Privacy Policy</button>
-            {onNavigateAdmin && (
-              <button onClick={onNavigateAdmin} className="flex items-center gap-1 hover:text-white transition-colors" title="Admin Login">
-                <Lock className="w-3 h-3" /> Admin
-              </button>
-            )}
           </div>
         </div>
       </div>

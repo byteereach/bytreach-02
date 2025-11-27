@@ -65,7 +65,7 @@ export const Portfolio: React.FC = () => {
                   <div className="flex items-end justify-between gap-4">
                     <h4 className="text-2xl font-bold text-white leading-tight">{item.title}</h4>
                     <div className="bg-white/10 p-2 rounded-full backdrop-blur-sm text-neon-yellow shrink-0 hover:bg-white/20 transition-colors">
-                      <ArrowUpRight className="w-6 h-6" />
+                     <ArrowUpRight className="w-6 h-6" />
                     </div>
                   </div>
                 </div>

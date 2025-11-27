@@ -41,6 +41,11 @@ const team: TeamMember[] = [
 ];
 
 export const Team: React.FC = () => {
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    // Fallback to a generic professional placeholder if the local image is missing
+    e.currentTarget.src = "https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=400&q=80";
+  };
+
   return (
     <section id="team" className="py-24 bg-deep-teal relative overflow-hidden">
       {/* Minimal Background Gradient */}
@@ -68,6 +73,7 @@ export const Team: React.FC = () => {
                     <img
                         src={member.imageUrl}
                         alt={member.name}
+                        onError={handleImageError}
                         className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 grayscale group-hover:grayscale-0"
                     />
                   </div>
