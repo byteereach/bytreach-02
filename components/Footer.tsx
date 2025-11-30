@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Linkedin, Facebook, Twitter, Lock } from 'lucide-react';
+import { Instagram, Linkedin, Facebook, Lock } from 'lucide-react';
 
 interface FooterProps {
   isHome?: boolean;
@@ -112,7 +112,7 @@ export const Footer: React.FC<FooterProps> = ({
             <ul className="space-y-3 text-gray-400">
               <li>byteereach@gmail.com</li>
               <li>+91 8320086937</li>
-              <li>India</li>
+              <li>surat, gujarat, India</li>
             </ul>
           </div>
         </div>

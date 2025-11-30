@@ -9,7 +9,7 @@ const portfolioItems: PortfolioItem[] = [
   { id: '3', category: 'Ad Campaign', title: 'Tech SaaS Growth', imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80' },
   { id: '4', category: 'Branding', title: 'Real Estate Identity', imageUrl: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&q=80' },
   { id: '5', category: 'SEO', title: 'Organic Traffic Boost', imageUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80' },
-  { id: '6', category: 'Video', title: 'Viral Reels Strategy', imageUrl: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=600&q=80' },
+  { id: '6', category: 'Video Editing', title: 'Viral Reels Strategy', imageUrl: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=600&q=80' },
 ];
 
 export const Portfolio: React.FC = () => {

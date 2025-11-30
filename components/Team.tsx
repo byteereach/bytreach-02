@@ -16,27 +16,27 @@ interface TeamMember {
 const team: TeamMember[] = [
   {
     id: '1',
-    name: 'Rajesh Verma',
-    role: 'Founder & Strategy Lead',
-    experience: '8+ Years Exp',
+    name: 'Om Gadhiya',
+    role: 'Founder & Director',
+    experience: '2+ Years Exp',
     // CHANGE THIS: Replace the URL below with your local image path like "/rajesh-photo.jpg"
-    imageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80'
+    imageUrl: 'https://drive.google.com/drive/folders/1cQfJZYGlL_U9dyCgQ0dfhaiPr1vZM7lq'
   },
   {
     id: '2',
     name: 'Priya Sharma',
     role: 'Creative Director',
-    experience: '6+ Years Exp',
+    experience: '1+ Years Exp',
     // CHANGE THIS: Replace with your image
-    imageUrl: 'https://images.unsplash.com/photo-1573496359-7013119ac13e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80'
+    imageUrl: 'https://drive.google.com/file/d/1cFLw9Op8myzRGgkQAMY_PkQBNUQ9FJcO/view?usp=sharing'
   },
   {
     id: '3',
     name: 'Arjun Patel',
     role: 'Lead Developer',
-    experience: '5+ Years Exp',
+    experience: '1.5+ Years Exp',
     // CHANGE THIS: Replace with your image
-    imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80'
+    imageUrl: 'https://drive.google.com/file/d/1cFLw9Op8myzRGgkQAMY_PkQBNUQ9FJcO/view?usp=sharing'
   }
 ];
 

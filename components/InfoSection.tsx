@@ -87,7 +87,7 @@ export const InfoSection: React.FC = () => {
             <div className="mt-8 pt-6 border-t border-white/10 text-center">
                 <p className="text-sm text-gray-500">
                     Need support outside these hours? <br/>
-                    <a href="mailto:bytereach@gmail.com" className="text-neon-purple hover:text-white transition-colors font-medium">Email our 24/7 Support Team</a>
+                    <a href="mailto:byteereach@gmail.com" className="text-neon-purple hover:text-white transition-colors font-medium">Email our 24/7 Support Team</a>
                 </p>
             </div>
           </div>

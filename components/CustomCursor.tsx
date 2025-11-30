@@ -11,7 +11,9 @@ export const CustomCursor: React.FC = () => {
   const mouseY = useMotionValue(-100);
 
   // Smooth spring animation for the follower ring
-  const springConfig = { damping: 25, stiffness: 400, mass: 0.5 };
+  // UPDATED PHYSICS: Lower stiffness and adjusted damping for a "buttery smooth" floaty feel
+  const springConfig = { damping: 20, stiffness: 150, mass: 0.8 };
+  
   const followerX = useSpring(mouseX, springConfig);
   const followerY = useSpring(mouseY, springConfig);
 
@@ -19,6 +21,7 @@ export const CustomCursor: React.FC = () => {
     const moveCursor = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
+      // Only set visible if it wasn't already to avoid state thrashing
       if (!isVisible) setIsVisible(true);
     };
 
@@ -63,7 +66,7 @@ export const CustomCursor: React.FC = () => {
 
   return (
     <>
-      {/* Main Dot - follows instantly */}
+      {/* Main Dot - follows instantly (Raw Mouse Position) */}
       <motion.div
         className="fixed top-0 left-0 w-2.5 h-2.5 bg-neon-yellow rounded-full pointer-events-none z-[9999] shadow-[0_0_10px_rgba(230,255,43,0.8)]"
         style={{
@@ -75,7 +78,7 @@ export const CustomCursor: React.FC = () => {
         }}
       />
 
-      {/* Follower Ring - follows with physics */}
+      {/* Follower Ring - follows with smooth spring physics */}
       <motion.div
         className="fixed top-0 left-0 rounded-full pointer-events-none z-[9998] border border-neon-blue/60"
         style={{
@@ -86,16 +89,17 @@ export const CustomCursor: React.FC = () => {
           opacity: isVisible ? 1 : 0,
         }}
         animate={{
-          width: isHoveringLink ? 50 : 30,
-          height: isHoveringLink ? 50 : 30,
-          backgroundColor: isHoveringLink ? 'rgba(0, 240, 255, 0.1)' : 'transparent',
-          borderColor: isHoveringLink ? 'rgba(230, 255, 43, 0.5)' : 'rgba(0, 240, 255, 0.6)',
+          width: isHoveringLink ? 60 : 35, // Slightly larger expansion for better effect
+          height: isHoveringLink ? 60 : 35,
+          backgroundColor: isHoveringLink ? 'rgba(0, 240, 255, 0.05)' : 'transparent',
+          borderColor: isHoveringLink ? 'rgba(230, 255, 43, 0.5)' : 'rgba(0, 240, 255, 0.4)',
           scale: isHoveringText ? 0.5 : 1, // Shrink on text inputs
+          borderWidth: isHoveringLink ? '2px' : '1px'
         }}
         transition={{
             type: "tween",
             ease: "backOut",
-            duration: 0.2
+            duration: 0.3
         }}
       />
     </>
