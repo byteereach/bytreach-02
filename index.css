@@ -17,7 +17,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px; /* Ensures anchor links don't hide behind sticky header */
+  scroll-padding-top: 120px; /* Ensures anchor links don't hide behind sticky header */
 }
 
 /* Custom Scrollbar */
