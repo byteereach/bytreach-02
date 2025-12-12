@@ -16,7 +16,6 @@ import { TermsAndConditions } from './components/TermsAndConditions';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { AdminDashboard } from './components/AdminDashboard';
 import { ResultsPage } from './components/ResultsPage';
-import { CustomCursor } from './components/CustomCursor';
 import { WelcomeEffect } from './components/WelcomeEffect';
 
 const App: React.FC = () => {
@@ -65,8 +64,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col relative overflow-x-hidden cursor-none">
-      <CustomCursor />
+    <div className="min-h-screen flex flex-col relative overflow-x-hidden">
       <WelcomeEffect />
       <Header 
         isHome={view === 'home'} 
